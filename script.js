@@ -57,5 +57,13 @@ function generatePassword() {
     allChars += specialChars;
   }  
 
+  // Generate the password
+  var generatedPassword = "";
+  for (var i = 0; i < passwordLength; i++) {
+      var randomIndex = Math.floor(Math.random() * allChars.length);
+      generatedPassword += allChars.charAt(randomIndex);
+  }
 
+  // Return the generated password
+  return generatedPassword;
 }
