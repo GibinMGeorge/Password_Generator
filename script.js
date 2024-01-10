@@ -24,7 +24,38 @@ function generatePassword() {
       return "";
   }
 
+  // Confirm character types 
+  var includeLowercase = confirm("Include lowercase characters?");
+  var includeUppercase = confirm("Include uppercase characters?");
+  var includeNumeric = confirm("Include numeric characters?");
+  var includeSpecialChars = confirm("Include special characters?");
 
+  // Validate that at least one character type is selected
+  if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecialChars) {
+      alert("Please select at least one character type.");
+      return "";
+  }
+
+  // Define character sets based on user choices
+  var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+  var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var numericChars = "0123456789";
+  var specialChars = "!@#$%^&*()_-+={}[]:;,<>./'?";
+
+  // Concatenate all character types
+  var allChars = "";
+  if (includeLowercase) {
+    allChars += lowercaseChars;
+  }   
+  if (includeUppercase) {
+    allChars += uppercaseChars;
+  }  
+  if (includeNumeric) {
+    allChars += numericChars;
+  }  
+  if (includeSpecialChars) {
+    allChars += specialChars;
+  }  
 
 
 }
