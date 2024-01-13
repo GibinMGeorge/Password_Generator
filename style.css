@@ -1,9 +1,11 @@
+/* Box-sizing property */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* initial styling for the HTML, body, and wrapper */
 html,
 body,
 .wrapper {
@@ -12,6 +14,7 @@ body,
   padding: 0;
 }
 
+/* Body styling */
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
@@ -23,13 +26,15 @@ body {
   padding-right: 20px;
 }
 
+/* Header styling */
 header {
   text-align: center;
   padding: 20px;
-  padding-top: 0px;
+  padding-top: 0px; 
   color: hsl(206, 17%, 28%);
 }
 
+/* Card styling */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -37,11 +42,12 @@ header {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
   color: hsl(206, 17%, 28%);
   font-size: 18px;
-  margin: 0 auto;
+  margin: 0 auto; /* Center the card */
   max-width: 800px;
   padding: 30px 40px;
 }
 
+/* Add a horizontal line after the card header */
 .card-header::after {
   content: " ";
   display: block;
@@ -54,11 +60,14 @@ header {
   min-height: 100px;
 }
 
+/* Footer styling */
 .card-footer {
   text-align: center;
 }
 
-.card-footer::before {
+/* Add horizontal lines before and after the card footer */
+.card-footer::before,
+.card-footer::after {
   content: " ";
   display: block;
   width: 100%;
@@ -72,12 +81,12 @@ header {
   clear: both;
 }
 
+/* Button styling */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
   color: hsl(0, 0%, 100%);
   display: inline-block;
   font-size: 22px;
@@ -97,6 +106,7 @@ button[disabled] {
   float: right;
 }
 
+/* styling for Password input*/
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -118,6 +128,7 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* Responsive stylings to adapt to different screens */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
@@ -129,6 +140,7 @@ button[disabled] {
     font-size: 1rem;
   }
 }
+
 
 @media (max-width: 500px) {
   .btn {
