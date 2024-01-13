@@ -56,11 +56,14 @@ function generatePassword() {
   if (includeSpecialChars) {
     allChars += specialChars;
   }  
+  // getting character length
+  
+  char_len = allChars.length;
 
   // Generate the password
   var generatedPassword = "";
   for (var i = 0; i < passwordLength; i++) {
-      var randomIndex = Math.floor(Math.random() * allChars.length);
+      var randomIndex = Math.floor(Math.random() * char_len);
       generatedPassword += allChars.charAt(randomIndex);
   }
 
